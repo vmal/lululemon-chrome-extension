@@ -18,7 +18,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://shop.lululemon.com/live-chat"],
+      "matches": ["https://shop.lululemon.com/*"],
       "js": ["content.js"],
       "css": ["modal.css"],
       "run_at": "document_end"

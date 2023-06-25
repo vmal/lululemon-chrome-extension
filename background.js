@@ -1,8 +1,9 @@
 "use strict";
 
 // On Chrome Install
-chrome.runtime.onInstalled.addListener(function (details) {
-    if (details.reason === "install") {
-        chrome.tabs.create({ url: "https://lulu-shop.vercel.app/" });
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.action === "openModal") {
+      chrome.tabs.sendMessage(sender.tab.id, { action: "openModal" });
     }
-});
+  });
+  

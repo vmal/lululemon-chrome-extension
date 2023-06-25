@@ -1,24 +1,24 @@
 {
-  "name": "Lululemon Concierge",
-  "version": "1.0.0",
-  "manifest_version": 3,
-  "description": "Use Lululemon Chat Bot as personal Concierge",
+  "name": "Lululemon Modal",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Inject modal into Lululemon website",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
   "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html"
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["popup.js"]
+      "matches": ["https://shop.lululemon.com/live-chat"],
+      "js": ["content.js"],
+      "css": ["modal.css"],
+      "run_at": "document_end"
     }
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  },
-  "icons": {
-    "48": "Lulu.png"
-  }
+  ]
 }

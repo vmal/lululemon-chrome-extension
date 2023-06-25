@@ -13,6 +13,9 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "icons": {
+    "48": "Lulu.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://shop.lululemon.com/live-chat"],

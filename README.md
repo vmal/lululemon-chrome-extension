@@ -1,3 +1,5 @@
+## Lululemon Virtual Assistant
+This chrome extension is an iframe wrapper around our [chatbot](https://github.com/lintonye/lulu-shop) 
 ## How to Install
 
 To install LuluLemon Chat Concierge Extension, follow these steps:
